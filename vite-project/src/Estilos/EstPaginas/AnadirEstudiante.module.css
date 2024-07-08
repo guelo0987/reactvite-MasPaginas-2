@@ -1,0 +1,120 @@
+.anadir-estudiante {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 45px;
+}
+
+.titulo {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo-completo, .campo-grupo {
+  width: 100%;
+}
+
+.campo-grupo {
+  display: flex;
+  gap: 20px;
+}
+
+.campo {
+  flex: 1;
+}
+
+.campo-largo {
+  flex: 2;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  font-size: 18px;
+}
+
+select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 50%;
+}
+
+.nombre-completo {
+  display: flex;
+  gap: 20px;
+}
+
+.nombre-completo input {
+  flex: 1;
+}
+
+.botones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 19px;
+}
+
+.cancelar {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.registrar {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.nota {
+  font-size: 12px;
+  color: #666;
+  margin-top: 20px;
+}
+
+/* Estilo de notificación para ambos formularios */
+.notification {
+  background-color: #4CAF50; /* Color de fondo verde */
+  color: white; /* Color del texto */
+  padding: 15px; /* Espaciado interno */
+  margin-bottom: 20px; /* Margen inferior */
+  border-radius: 4px; /* Borde redondeado */
+  font-size: 16px; /* Tamaño de fuente */
+  text-align: center; /* Alineación del texto */
+}
+
+.error {
+  border-color: #ff0000;
+}
+
+.error-message {
+  color: #ff0000;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}

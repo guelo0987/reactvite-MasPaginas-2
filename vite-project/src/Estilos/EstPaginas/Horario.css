@@ -1,0 +1,79 @@
+/* Horario.css */
+.horario-page {
+  margin-top: 60px; /* Ajuste para que no se superponga con el header */
+}
+
+.horario-page .container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+.horario-page .main-content {
+  display: flex;
+  flex: 1;
+}
+
+.horario-page .schedule-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  flex: 1;
+  margin-left: 250px; /* Ajuste para que no se solape con el sidebar */
+  border: 1px solid #ccc;
+}
+
+.horario-page .schedule-header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border-bottom: 1px solid #ccc;
+}
+
+.horario-page .schedule-day {
+  text-align: center;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.horario-page .schedule-day:last-child {
+  border-right: none;
+}
+
+.horario-page .schedule-body {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  overflow-y: auto;
+}
+
+.horario-page .schedule-column {
+  border-right: 1px solid #ccc;
+  position: relative;
+  overflow-y: auto;
+}
+
+.horario-page .schedule-column:last-child {
+  border-right: none;
+}
+
+.horario-page .schedule-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.horario-page .lightpurple {
+  background-color: #e6e6fa;
+}
+
+.horario-page .lightblue {
+  background-color: #add8e6;
+}
+
+.horario-page .lightorange {
+  background-color: #ffdab9;
+}

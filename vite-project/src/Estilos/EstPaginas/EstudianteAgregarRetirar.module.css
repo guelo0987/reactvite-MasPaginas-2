@@ -1,0 +1,157 @@
+.agregarMaterias, .retirarMaterias {
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 35px; /* Ajusta según necesites */
+    margin-left: 260px;
+  }
+  
+  .agregarMaterias .title, .retirarMaterias .title {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .agregarMaterias .icon, .retirarMaterias .icon {
+    margin-right: 10px;
+  }
+  
+  .agregarMaterias .form, .retirarMaterias .form {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .agregarMaterias .filters, .retirarMaterias .filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .agregarMaterias .selectWrapper, .agregarMaterias .searchWrapper,
+  .retirarMaterias .selectWrapper, .retirarMaterias .searchWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .agregarMaterias .select, .agregarMaterias .searchInput,
+  .retirarMaterias .select, .retirarMaterias .searchInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .agregarMaterias .addButton, .retirarMaterias .removeButton {
+    padding: 8px 16px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .agregarMaterias .addButton:hover, .retirarMaterias .removeButton:hover {
+    background-color: #357abd;
+  }
+  
+  .agregarMaterias .table, .retirarMaterias .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .agregarMaterias .table th, .agregarMaterias .table td,
+  .retirarMaterias .table th, .retirarMaterias .table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .agregarMaterias .table th, .retirarMaterias .table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .agregarMaterias .table tr:nth-child(even), .retirarMaterias .table tr:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+  
+  .agregarMaterias .table input[type="checkbox"], .retirarMaterias .table input[type="checkbox"] {
+    cursor: pointer;
+  }
+  
+  .agregarMaterias .message, .retirarMaterias .message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .agregarMaterias .agregada, .retirarMaterias .agregada {
+    background-color: #d4edda !important; /* Color de fondo verde */
+  }
+  
+  .retirarMaterias .removeButton {
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .retirarMaterias .removeButton:hover {
+    background-color: #c82333;
+  }
+  
+  .alertOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  .alertBox {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .alertButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .confirmButton, .cancelButton {
+    padding: 8px 16px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .confirmButton {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .cancelButton {
+    background-color: #6c757d;
+    color: white;
+  }
+  

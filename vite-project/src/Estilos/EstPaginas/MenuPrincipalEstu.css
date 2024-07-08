@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --letraCartas:#0C1E33;
+
+ }
+  
+ 
+ .main{
+    margin-left: 265px;
+    font-family: "Poppins", sans-serif;
+
+  }
+  .course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: -12px; /* Compensación por el margen negativo */
+  }
+
+  .course-card {
+    margin: 12px;
+    flex: 0 0 calc(25% - 24px); /* Ancho fijo para cada tarjeta con margen ajustado */
+    max-width: calc(25% - 24px); /* Ancho máximo para asegurar que no se superpongan */
+    background-color: var(--course-card-bg-color, white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center  /* Centrar horizontalmente */
+  }
+
+  .course-card-content {
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido esté apilado verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: left; /* Centrar horizontalmente */
+    height: 100%; /* Ocupa toda la altura disponible dentro de la tarjeta */
+  }
+
+  .course-card-title {
+    color:var(--letraCartas);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-align: left;
+    border-bottom: 1px solid #000000; /* Agrega una línea horizontal debajo del título */
+  }
+
+  .course-card-details {
+    display: flex;
+    flex-direction: column; /* Asegura que los detalles estén apilados verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: left; /* Centrar horizontalmente */
+  }
+
+  .course-card-detail {
+    color: var(--letraCartas);
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 15px; /* Espacio entre detalles */
+    text-align: left; /* Alinear el texto al centro */
+  }
+
+  .course-card-detail-label {
+    font-weight: bold;
+    margin-right: 4px;
+  }
+
+
+  /*Parte de arrbia de las cartas.*/
+  .user-profile {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .user-profile-content {
+    display: flex; /* Make the content elements side-by-side */
+  }
+
+  .profile-avatar-landing {
+    width: 200px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 20px; /* Space between image and user information */
+  }
+
+  .user-profile-details {
+    flex: 1; /* Allow remaining space for text content */
+  }
+
+  .user-profile-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .user-profile-detail {
+    margin-bottom: 5px;
+  }
+
+  .user-profile-detail-label {
+    font-weight: bold;
+    margin-right: 5px;
+  }

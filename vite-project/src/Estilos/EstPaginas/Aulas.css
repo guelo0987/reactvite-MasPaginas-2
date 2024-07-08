@@ -1,0 +1,154 @@
+.aulasContainer {
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 265px;
+  margin-top: 45px;
+}
+
+.aulasTitle {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.aulasIcon {
+  font-size: 28px;
+  margin-right: 10px;
+  color: #4a90e2;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.filterGroup label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  color: #333;
+  min-width: 200px;
+}
+
+.assignButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.assignButton:hover {
+  background-color: #45a049;
+}
+
+.tableContainer {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.aulasTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.aulasTable th, .aulasTable td {
+  text-align: left;
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.aulasTable th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.aulasTable tr:last-child td {
+  border-bottom: none;
+}
+
+.aulasTable tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Estilos para hacer la tabla responsive */
+@media screen and (max-width: 600px) {
+  .filters {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .filterGroup {
+      margin-bottom: 10px;
+  }
+
+  .assignButton {
+      width: 100%;
+  }
+
+  .aulasTable, .aulasTable thead, .aulasTable tbody, .aulasTable th, .aulasTable td, .aulasTable tr {
+      display: block;
+  }
+
+  .aulasTable thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+
+  .aulasTable tr {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+  }
+
+  .aulasTable td {
+      border: none;
+      position: relative;
+      padding-left: 50%;
+  }
+
+  .aulasTable td:before {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      content: attr(data-label);
+      font-weight: bold;
+  }
+}

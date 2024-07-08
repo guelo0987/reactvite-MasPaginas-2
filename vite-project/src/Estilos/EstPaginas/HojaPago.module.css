@@ -1,0 +1,281 @@
+/* Estilo para el cuadro combinado */
+.student-details {
+    border: 2px solid #007BFF; /* Borde azul */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px;
+    margin-bottom: 20px; /* Espacio entre los cuadros */
+    background-color: #f9f9f9; /* Color de fondo para hacer que el cuadro se destaque */
+  }
+  
+  .hoja-de-pago-page {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    margin-left: 275px;
+    position: relative;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+  }
+  
+  .sidebar h2 {
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+  
+  .content-area {
+    flex-grow: 1;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 20px;
+    border-radius: 8px;
+  }
+  
+  .hoja-de-pago-page h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .filters-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .filters, .invoice-table, .payments {
+    border: 2px solid #007BFF; /* Borde azul */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px;
+    margin-bottom: 20px; /* Espacio entre los cuadros */
+  }
+  
+  .filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .filter-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  
+  .filter-item label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .filter-item select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  
+  .generate-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .student-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .student-info div {
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .student-info h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .student-info p {
+    font-size: 16px;
+    margin-bottom: 0;
+    color: #666;
+  }
+  
+  .invoice-table {
+    margin-bottom: 20px; /* Ajustado para reducir el espacio */
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .invoice-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .invoice-table th,
+  .invoice-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .invoice-table th {
+    background-color: #e6f7ff; /* Color azul claro para el header de la tabla */
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .invoice-table td {
+    text-align: center;
+  }
+  
+  .invoice-table tr:nth-child(even) {
+    background-color: #f1faff; /* Color azul muy claro para filas pares */
+  }
+  
+  .payments {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px; /* Ajustado para reducir el espacio */
+  }
+  
+  .payment {
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .payment h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .payment p {
+    font-size: 16px;
+    margin-bottom: 0;
+    color: #666;
+  }
+  
+  .header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .download-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .download-button:hover {
+    background-color: #45a049;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .pay-button, .download-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .pay-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .pay-button:hover {
+    background-color: #45a049;
+  }
+
+  .download-button {
+    background-color: #008CBA;
+    color: white;
+  }
+
+  .download-button:hover {
+    background-color: #007B9E;
+  }
+
+  /* Estilos para el formulario de Stripe */
+  .StripeElement {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+  }
+
+  .StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+  }
+
+  .StripeElement--invalid {
+    border-color: #fa755a;
+  }
+
+  .StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+  }

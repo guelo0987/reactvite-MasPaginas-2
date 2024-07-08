@@ -1,0 +1,78 @@
+/* TaskModal.css */
+
+.task-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000000; /* Asegúrate de que el modal esté en la capa superior */
+
+}
+
+.task-modal {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-modal h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.task-modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-modal label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.task-modal input[type="text"],
+.task-modal input[type="date"] {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.task-modal .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.task-modal button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task-modal button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+.task-modal button[type="button"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+.task-modal button[type="submit"]:hover,
+.task-modal button[type="button"]:hover {
+    opacity: 0.8;
+}

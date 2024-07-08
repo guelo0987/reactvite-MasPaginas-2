@@ -1,0 +1,48 @@
+.main-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000; /* asigna un valor menor que el del sidebar */
+  background-color: #fff; /* opcional, para darle un fondo blanco */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* opcional, para darle una sombra */
+  display: flex;
+  justify-content: flex-end; /* para que los elementos se alineen a la derecha */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.main-header-icons {
+  display: flex;
+}
+
+.main-header-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.main-header-profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-info {
+  margin-right: 10px;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.profile-role {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
