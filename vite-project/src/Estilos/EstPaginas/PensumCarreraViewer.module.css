@@ -1,0 +1,59 @@
+.pensumCarrera {
+    padding: 20px;
+    margin: 45px 0 0 245px; /* Margen superior de 45px y margen izquierdo de 245px */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px; /* Tamaño de fuente aumentado por defecto */
+}
+
+.mainTitle {
+    text-align: center;
+    font-size: 28px; /* Tamaño de fuente */
+    color: #000000; /* Color negro */
+    margin-bottom: 20px;
+}
+
+.sectionTitle {
+    text-align: left;
+    font-size: 20px; /* Tamaño de fuente reducido */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.table th, .table td {
+    padding: 14px 17px; /* Padding ligeramente aumentado */
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 18px; /* Tamaño de fuente aumentado */
+}
+
+.table th {
+    background-color: #12397D;
+    color: white;
+    font-size: 20px; /* Tamaño de fuente aumentado */
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tr:hover {
+    background-color: #ddd;
+}
+
+.table td {
+    color: #000000;
+    font-size: 18px; /* Tamaño de fuente aumentado */
+}
+
+.table td:first-child {
+    font-weight: bold;
+    color: #333;
+}

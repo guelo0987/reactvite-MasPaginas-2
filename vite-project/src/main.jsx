@@ -5,7 +5,7 @@ import { App } from './App.jsx';
 import { Login } from './Paginas/Login.jsx';
 import { MenuPrincipal } from './Paginas/MenuPrincipalEstu.jsx';
 import { Calendario } from './Paginas/Calendario.jsx';
-import { PensumCarrera } from './Paginas/PensumCarrera.jsx';
+import  {PensumCarrera}  from './Paginas/PensumCarrera.jsx';
 import { HojaPago } from './Paginas/HojaPago.jsx';
 import { CuentaPorPagar } from './Paginas/CuentaPorPagar.jsx';
 import { Horario } from './Paginas/Horario.jsx';
@@ -21,6 +21,10 @@ import { AnadirProfesor } from './Paginas/AnadirProfesor.jsx';
 import { Materias } from './Paginas/Materias.jsx';
 import { Aulas } from './Paginas/Aulas.jsx';
 import { Secciones } from './Paginas/Secciones.jsx';
+import { ProfesorDashboard } from './Paginas/ProfesorDashboard.jsx';
+import { CalendarioAcademico } from './Paginas/CalendarioAcademico.jsx';
+import { PublicarNota } from './Paginas/PublicarCalificacion.jsx';
+import { PensumCarreraViewer} from "./Paginas/PensumCarreraViewer.jsx"
 
 const router = createBrowserRouter([
   {
@@ -47,7 +51,7 @@ const router = createBrowserRouter([
     path: '/pensum-carrera',
     element: (
       <ProtectedRoute>
-        <PensumCarrera />
+        <PensumCarreraViewer />
       </ProtectedRoute>
     ),
   },
@@ -146,7 +150,25 @@ const router = createBrowserRouter([
     element:(<ProtectedRoute>
       <Secciones/>
     </ProtectedRoute>)
-  }
+  },
+  {
+    path:"/ProfesorDashboard",
+    element:(<ProtectedRoute>
+      <ProfesorDashboard/>
+    </ProtectedRoute>)
+  },
+  {
+    path:"/CalendarioAcademico",
+    element:(<ProtectedRoute>
+      <CalendarioAcademico/>
+    </ProtectedRoute>)
+  },
+  {
+    path:"/PublicarNota",
+    element:(<ProtectedRoute>
+      <PublicarNota/>
+    </ProtectedRoute>)
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

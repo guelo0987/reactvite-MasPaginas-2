@@ -1,22 +1,17 @@
-import React from "react";
-import Sidebar from '../Componentes/Sidebar2.jsx';
-import Header from '../Componentes/Header.jsx';
-
-import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
-import pdfFile from '../Doc/pensum-IMec.pdf'; // Ajusta la ruta según la ubicación de tu archivo PDF
-
+import React from 'react';
+import styles from './PensumCarrera.module.css'; // Importar estilos CSS Modules
+import pensumIMecPDF from '../Doc/PensumIDS.pdf'; // Ruta al archivo PDF
+import Header from '../Componentes/Header';
+import Sidebar from '../Componentes/Sidebar2';
 
 export function PensumCarrera() {
   return (
-    <div>
-      <Header />
-      <Sidebar />
-      <h1>Pensum Carrera</h1>
-      <div style={{ width: '100%', maxWidth: '800px', margin: 'auto' }}>
-        <Document file={pdfFile}>
-          <Page pageNumber={1} />
-        </Document>
-      </div>
+    
+    <div className={styles.container}>
+      <Header/>
+      <Sidebar/>
+      <h1 className={styles.title}>Pensum de Carrera</h1>
+      <embed className={styles.pdfEmbed} src={pensumIMecPDF} type="application/pdf" />
     </div>
   );
 }

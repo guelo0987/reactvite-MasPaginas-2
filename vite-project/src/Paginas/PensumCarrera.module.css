@@ -1,0 +1,19 @@
+/* PensumCarrera.module.css */
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 125px;
+  }
+  
+  .pdfEmbed {
+    width: 80%;
+    height: 80%;
+  }
+  .title {
+    margin-bottom: 20px; /* Espacio inferior al título */
+    margin-left: -1150px;
+  }

@@ -16,7 +16,11 @@ export function Login() {
     if (user) {
       if (user.role === 'Admin') {
         navigate('/AdminDashboard');
-      } else {
+      } 
+      else if (user.role === 'Docente') {
+        navigate('/ProfesorDashboard');
+      }
+      else {
         navigate('/Menu');
       }
     }

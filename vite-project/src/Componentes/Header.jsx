@@ -6,8 +6,8 @@ const Header = () => {
   const { user } = useAuth(); // Obtener el usuario desde el contexto
 
   // Determinar qué información mostrar segn el tipo de usuario
-  const nombreMostrado = user?.nombreAdmin || user?.nombreEstudiante;
-  const correoMostrado = user?.correoAdmin || user?.correoEstudiante;
+  const nombreMostrado = user?.nombreAdmin || user?.nombreEstudiante || user?.nombreDocente;
+  const correoMostrado = user?.correoAdmin || user?.correoEstudiante || user?.correoDocente;
 
   return (
     <header className="main-header">
