@@ -54,7 +54,7 @@ export function EstudianteRetirarMaterias() {
       }
 
       const response = await axios.get(
-        `http://localhost:5104/api/EstudianteMateriaApi/GetMateriasEstudiante/${user.id}/${user.periodoActual}`,
+        `http://localhost:5124/api/EstudianteMateriaApi/GetMateriasEstudiante/${user.id}/${user.periodoActual}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -86,7 +86,7 @@ export function EstudianteRetirarMaterias() {
 
           console.log('Datos a enviar:', { estudianteId, seccionId });
           
-          const response = await axios.delete(`http://localhost:5104/api/EstudianteMateriaApi/RemoveSeccion`, {
+          const response = await axios.delete(`http://localhost:5124/api/EstudianteMateriaApi/RemoveSeccion`, {
             params: { estudianteId, seccionId }
           });
           

@@ -33,8 +33,8 @@ export function ListadoUsuarios() {
           headers: { Authorization: `Bearer ${token}` }
         };
 
-        const estudiantesResponse = await axios.get('http://localhost:5104/api/Estudiante', config);
-        const docentesResponse = await axios.get('http://localhost:5104/api/DocenteApi', config);
+        const estudiantesResponse = await axios.get('http://localhost:5124/api/Estudiante', config);
+        const docentesResponse = await axios.get('http://localhost:5124/api/DocenteApi', config);
 
         const estudiantes = estudiantesResponse.data.map(est => ({
           id: est.id,

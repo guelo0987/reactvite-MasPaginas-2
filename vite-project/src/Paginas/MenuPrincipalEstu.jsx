@@ -86,7 +86,7 @@ export function MenuPrincipal() {
     const fetchMaterias = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`http://localhost:5104/api/EstudianteMateriaApi/GetMateriasEstudiante/${user.id}/${user.periodoActual}`);
+        const response = await axios.get(`http://localhost:5124/api/EstudianteMateriaApi/GetMateriasEstudiante/${user.id}/${user.periodoActual}`);
         console.log('Respuesta completa de la API:', response.data);
         const materiasData = Array.isArray(response.data) ? response.data : [];
         console.log('Primera materia:', materiasData[0]);

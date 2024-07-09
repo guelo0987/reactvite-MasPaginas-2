@@ -21,7 +21,7 @@ export function PublicarNota() {
 
     const fetchMaterias = async () => {
         try {
-            const response = await axios.get(`http://localhost:5104/api/MateriaDocenteApi/GetMateriasYSeccionesPorDocente/${user.codigoDocente}`);
+            const response = await axios.get(`http://localhost:5124/api/MateriaDocenteApi/GetMateriasYSeccionesPorDocente/${user.codigoDocente}`);
             setMaterias(response.data);
         } catch (error) {
             console.error('Error al obtener las materias:', error);
@@ -42,7 +42,7 @@ export function PublicarNota() {
 
     const fetchEstudiantes = async (seccionId) => {
         try {
-            const response = await axios.get(`http://localhost:5104/api/MateriaDocenteApi/GetEstudiantes/${user.codigoDocente}/${selectedMateria}/${seccionId}`);
+            const response = await axios.get(`http://localhost:5124/api/MateriaDocenteApi/GetEstudiantes/${user.codigoDocente}/${selectedMateria}/${seccionId}`);
             setEstudiantes(response.data);
         } catch (error) {
             console.error('Error al obtener los estudiantes:', error);
@@ -73,7 +73,7 @@ export function PublicarNota() {
                     calificacionData.calificacionFinal = estudiante.calificacionFinal;
                 }
                 console.log('Enviando datos:', calificacionData); // Para depuración
-                const response = await axios.put(`http://localhost:5104/api/MateriaDocenteApi/EditCalificacion/${estudiante.id}/${selectedMateria}/${selectedSeccion}`, calificacionData);
+                const response = await axios.put(`http://localhost:5124/api/MateriaDocenteApi/EditCalificacion/${estudiante.id}/${selectedMateria}/${selectedSeccion}`, calificacionData);
                 console.log('Respuesta del servidor:', response.data); // Para depuración
             }
             setSuccessMessage('Calificaciones publicadas exitosamente');

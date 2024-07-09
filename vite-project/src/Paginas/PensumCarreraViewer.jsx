@@ -24,7 +24,7 @@ export function PensumCarreraViewer() {
         setLoading(true);
         setError(null);
         try {
-            const response = await axios.get(`http://localhost:5104/api/CarreraMateriaApi/GetMateriasByCarrera/${carreraId}`);
+            const response = await axios.get(`http://localhost:5124/api/CarreraMateriaApi/GetMateriasByCarrera/${carreraId}`);
             setMaterias(response.data);
         } catch (error) {
             console.error('Error al obtener las materias:', error);

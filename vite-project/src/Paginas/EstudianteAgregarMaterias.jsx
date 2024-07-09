@@ -50,7 +50,7 @@ export function EstudianteAgregarMaterias() {
 
   const fetchMaterias = async () => {
     try {
-      const response = await axios.get('http://localhost:5104/api/MateriaDocenteApi');
+      const response = await axios.get('http://localhost:5124/api/MateriaDocenteApi');
       console.log('Datos recibidos de la API:', response.data);
       setMaterias(response.data);
       setFilteredMaterias(response.data);
@@ -77,7 +77,7 @@ export function EstudianteAgregarMaterias() {
 
           console.log('Datos a enviar:', { estudianteId, seccionId });
           
-          const response = await axios.post(`http://localhost:5104/api/EstudianteMateriaApi/SelectSeccion?estudianteId=${estudianteId}&seccionId=${seccionId}`);
+          const response = await axios.post(`http://localhost:5124/api/EstudianteMateriaApi/SelectSeccion?estudianteId=${estudianteId}&seccionId=${seccionId}`);
           
           console.log('Respuesta del servidor:', response.data);
         }

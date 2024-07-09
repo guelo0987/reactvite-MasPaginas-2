@@ -34,7 +34,7 @@ export function AnadirEstudiante() {
   useEffect(() => {
     const fetchCarreras = async () => {
       try {
-        const response = await axios.get('http://localhost:5104/api/CarreraApi');
+        const response = await axios.get('http://localhost:5124/api/CarreraApi');
         setCarreras(response.data);
       } catch (error) {
         console.error('Error al cargar las carreras', error);
@@ -90,7 +90,7 @@ export function AnadirEstudiante() {
       };
 
       try {
-        await axios.post('http://localhost:5104/api/Estudiante/CreateEstudiante', formData, config);
+        await axios.post('http://localhost:5124/api/Estudiante/CreateEstudiante', formData, config);
         setShowSuccessMessage(true);
         // Resetear los campos del formulario
         setFormData({

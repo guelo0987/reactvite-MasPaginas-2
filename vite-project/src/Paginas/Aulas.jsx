@@ -28,7 +28,7 @@ export function Aulas() {
         return;
       }
 
-      const response = await axios.get('http://localhost:5104/api/AulaApi', {
+      const response = await axios.get('http://localhost:5124/api/AulaApi', {
         headers: { 
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -55,7 +55,7 @@ export function Aulas() {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:5104/api/AulaApi/CreateAula', nuevaAula, {
+      await axios.post('http://localhost:5124/api/AulaApi/CreateAula', nuevaAula, {
         headers: { 
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'

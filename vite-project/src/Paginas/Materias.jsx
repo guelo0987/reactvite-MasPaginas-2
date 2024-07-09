@@ -35,7 +35,7 @@ export function Materias() {
         const config = {
           headers: { Authorization: `Bearer ${token}` }
         };
-        const response = await axios.get('http://localhost:5104/api/CarreraApi', config);
+        const response = await axios.get('http://localhost:5124/api/CarreraApi', config);
         setCarreras(response.data);
       } catch (error) {
         console.error('Error al cargar las carreras', error);
@@ -52,7 +52,7 @@ export function Materias() {
         const config = {
           headers: { Authorization: `Bearer ${token}` }
         };
-        const response = await axios.get('http://localhost:5104/api/DocenteApi', config);
+        const response = await axios.get('http://localhost:5124/api/DocenteApi', config);
         setDocentes(response.data);
       } catch (error) {
         console.error('Error al cargar los docentes', error);
@@ -69,7 +69,7 @@ export function Materias() {
         const config = {
           headers: { Authorization: `Bearer ${token}` }
         };
-        const response = await axios.get('http://localhost:5104/api/AulaApi', config);
+        const response = await axios.get('http://localhost:5124/api/AulaApi', config);
         setAulas(response.data);
       } catch (error) {
         console.error('Error al cargar las aulas', error);
@@ -150,7 +150,7 @@ export function Materias() {
 
       // Verificar si el código de materia ya existe
       try {
-        const checkResponse = await axios.get(`http://localhost:5104/api/MateriaApi/CheckCodigo/${formData.codigoMateria}`, config);
+        const checkResponse = await axios.get(`http://localhost:5124/api/MateriaApi/CheckCodigo/${formData.codigoMateria}`, config);
         if (checkResponse.data.exists) {
           setApiError(`El código de materia ${formData.codigoMateria} ya existe. Por favor, use un código diferente.`);
           return;
@@ -172,11 +172,11 @@ export function Materias() {
       console.log('Request payload:', materiaData);
 
       // Crear materia
-      const materiaResponse = await axios.post('http://localhost:5104/api/MateriaApi/CreateMateria', materiaData, config);
+      const materiaResponse = await axios.post('http://localhost:5124/api/MateriaApi/CreateMateria', materiaData, config);
       const materiaId = materiaResponse.data.codigoMateria;
 
       // Asignar materia a carrera
-      await axios.post('http://localhost:5104/api/CarreraMateriaApi/CreateCarreraMateria', {
+      await axios.post('http://localhost:5124/api/CarreraMateriaApi/CreateCarreraMateria', {
         carreraId: parseInt(formData.carrera),
         codigoMateria: materiaId
       }, config);
@@ -194,7 +194,7 @@ export function Materias() {
 
         try {
           // Crear la sección
-          const seccionResponse = await axios.post('http://localhost:5104/api/SeccionApi/CreateSeccion', seccionData, config);
+          const seccionResponse = await axios.post('http://localhost:5124/api/SeccionApi/CreateSeccion', seccionData, config);
           console.log('Respuesta de la creación de sección:', seccionResponse.data);
 
           // Usar el ID de la sección creado por el usuario
@@ -208,7 +208,7 @@ export function Materias() {
           console.log('Datos de MateriaDocente a crear:', materiaDocenteData);
 
           // Crear la asociación MateriaDocente
-          const materiaDocenteResponse = await axios.post('http://localhost:5104/api/MateriaDocenteApi/CreateMateriaDocente', materiaDocenteData, config);
+          const materiaDocenteResponse = await axios.post('http://localhost:5124/api/MateriaDocenteApi/CreateMateriaDocente', materiaDocenteData, config);
           console.log('Respuesta de la creación de MateriaDocente:', materiaDocenteResponse.data);
 
         } catch (error) {

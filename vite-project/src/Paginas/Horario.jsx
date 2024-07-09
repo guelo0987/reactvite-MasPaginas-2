@@ -48,7 +48,7 @@ export function Horario() {
   useEffect(() => {
     const fetchHorario = async () => {
       try {
-        const response = await axios.get(`http://localhost:5104/api/EstudianteMateriaApi/GetMateriasEstudiante/${user.id}/${user.periodoActual}`);
+        const response = await axios.get(`http://localhost:5124/api/EstudianteMateriaApi/GetMateriasEstudiante/${user.id}/${user.periodoActual}`);
         const materias = response.data;
         const horario = materias.flatMap((materia, index) => {
           const horarioFormateado = formatearHorario(materia.horario);

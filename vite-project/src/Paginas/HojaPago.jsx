@@ -32,7 +32,7 @@ const CheckoutForm = ({ facturaId, montoTotal, onPaymentSuccess, onPaymentError 
       onPaymentError(error);
     } else {
       try {
-        const response = await axios.post('http://localhost:5104/api/Factura/procesarPago', {
+        const response = await axios.post('http://localhost:5124/api/Factura/procesarPago', {
           facturaId: facturaId,
           paymentMethodId: paymentMethod.id
         });
@@ -80,7 +80,7 @@ export function HojaPago() {
         headers: { Authorization: `Bearer ${token}` }
       };
 
-      const cuentasResponse = await axios.get(`http://localhost:5104/api/CuentaPorPagar/cuentaporpagar`, {
+      const cuentasResponse = await axios.get(`http://localhost:5124/api/CuentaPorPagar/cuentaporpagar`, {
         ...config,
         params: {
           periodo: `${year}-${period}`,
@@ -124,7 +124,7 @@ export function HojaPago() {
 
   const verificarDeuda = async () => {
     try {
-      const response = await axios.get(`http://localhost:5104/api/Factura/verificarDeuda`, {
+      const response = await axios.get(`http://localhost:5124/api/Factura/verificarDeuda`, {
         params: {
           codigoEstudiante: user.id,
           periodo: `${year}-${period}`
@@ -152,7 +152,7 @@ export function HojaPago() {
 
   const handlePayment = async () => {
     try {
-      const response = await axios.post(`http://localhost:5104/api/Factura/generarFactura`, {
+      const response = await axios.post(`http://localhost:5124/api/Factura/generarFactura`, {
         periodo: `${year}-${period}`,
         codigoEstudiante: user.id
       });

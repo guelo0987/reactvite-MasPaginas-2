@@ -19,7 +19,7 @@ export function Secciones() {
   const obtenerSecciones = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5104/api/SeccionApi', {
+      const response = await axios.get('http://localhost:5124/api/SeccionApi', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -34,7 +34,7 @@ export function Secciones() {
   const obtenerAulas = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5104/api/AulaApi', {
+      const response = await axios.get('http://localhost:5124/api/AulaApi', {
         headers: {
           'Authorization': `Bearer ${token}`
         }

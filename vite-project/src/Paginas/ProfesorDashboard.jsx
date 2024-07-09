@@ -20,7 +20,7 @@ export function ProfesorDashboard() {
                 if (!token) {
                     throw new Error('No se encontró el token de autenticación');
                 }
-                const response = await axios.get(`http://localhost:5104/api/MateriaDocenteApi/GetMateriasYSeccionesPorDocente/${user.codigoDocente}`, {
+                const response = await axios.get(`http://localhost:5124/api/MateriaDocenteApi/GetMateriasYSeccionesPorDocente/${user.codigoDocente}`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 console.log('Respuesta de la API:', response.data);

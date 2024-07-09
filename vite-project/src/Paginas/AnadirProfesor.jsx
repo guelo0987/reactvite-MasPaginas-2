@@ -23,7 +23,7 @@ export function AnadirProfesor() {
   useEffect(() => {
     const fetchAsignaturas = async () => {
       try {
-        const response = await axios.get('http://localhost:5104/api/SeccionApi');
+        const response = await axios.get('http://localhost:5124/api/SeccionApi');
         const materias = response.data.reduce((acc, seccion) => {
           if (!acc[seccion.codigoMateria]) {
             acc[seccion.codigoMateria] = [];
@@ -80,7 +80,7 @@ export function AnadirProfesor() {
         const config = {
           headers: { Authorization: `Bearer ${token}` }
         };
-        const response = await axios.get(`http://localhost:5104/api/MateriaApi/${value}/Secciones`, config);
+        const response = await axios.get(`http://localhost:5124/api/MateriaApi/${value}/Secciones`, config);
         setSecciones(response.data);
         console.log("Secciones cargadas:", response.data);
       } catch (error) {
@@ -113,7 +113,7 @@ export function AnadirProfesor() {
           headers: { Authorization: `Bearer ${token}` }
         };
 
-        const docenteResponse = await axios.post('http://localhost:5104/api/DocenteApi/CreateDocente', {
+        const docenteResponse = await axios.post('http://localhost:5124/api/DocenteApi/CreateDocente', {
           codigoDocente: formData.codigoDocente,
           nombreDocente: formData.nombreDocente,
           correoDocente: formData.correoDocente,

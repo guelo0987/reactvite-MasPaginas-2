@@ -21,7 +21,7 @@ export function ReporteCalificaciones() {
         setLoading(true);
         setError(null);
         try {
-            const url = `http://localhost:5104/api/EstudianteMateriaApi/GetCalificacionesEstudiante/${user.id}/${year}-${period}/${qualificationType}`;
+            const url = `http://localhost:5124/api/EstudianteMateriaApi/GetCalificacionesEstudiante/${user.id}/${year}-${period}/${qualificationType}`;
             const response = await axios.get(url);
             console.log('Datos recibidos:', response.data);
             console.log('Calificaciones:', response.data.calificaciones);
